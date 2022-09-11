@@ -1,0 +1,50 @@
+# Composer ignores
+/vendor
+composer.phar
+composer.lock
+
+
+# Framework ignores
+.env
+.env.*.php
+.env.php
+selenium.php
+/bootstrap/compiled.php
+.phpunit.result.cache
+/modules/*
+/plugins/*
+!/plugins/fvera/
+!/plugins/laminsanneh/
+/tests/*
+/themes/familiar-landing-theme/assets/node_modules/*
+/themes/familiar-landing-theme/assets/node_modules/package-lock.json
+/storage/app/
+/public
+
+# Hosting ignores
+php_errors.log
+nginx-error.log
+nginx-access.log
+nginx-ssl.access.log
+nginx-ssl.error.log
+sftp-config.json
+.ftpconfig
+
+# Editor ignores
+nbproject
+.idea
+.vscode
+_ide_helper.php
+.github
+.gitpod
+
+# Other ignores
+.github/*
+.DS_Store
+package-lock.json
+/node_modules
+_ide_helper.php
+
+# Ignore generated public directory from `winter:mirror public`
+public
+modules
