@@ -1,0 +1,33 @@
+<section id="profiles">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="h2 fw-bold">
+                    Los diferentes tipos de perfiles
+                    que caen en ciberdelincuencia
+                </div>
+                <hr>
+            </div>
+            <div class="row">
+                {% for i in 1..3 %}
+                <div class="col-4">
+                    <div class="card-profile text-center">
+                        <div>
+                            <img class="w-100" src="{{ 'assets/images/PNG/persona-2+box.png' | theme }}" alt="">
+                        </div>
+                        <div class="">
+                            <h6 class="fw-bold">
+                                El Desinformado
+                            </h6>
+                            <p>
+                                No presta atención a los correos que recibe y simplemente le da clic para poder
+                                terminar sus tareas pendientes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

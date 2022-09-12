@@ -1,0 +1,31 @@
+<section id="features">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="fw-bold">
+                    La mejor ofensa es una buena defensa
+                </h2>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h6>
+                        Aplicá estas estrategias:
+                    </h6>
+                </div>
+                {% for i in 1..3 %}
+                <div class="col-4">
+                    <div class="card-feature text-center">
+                        <div class="">
+                            <img src="{{'assets/images/SVG/icono-contrasenha.svg' | theme }}" alt="icono boton telefono" title="icono boton telefono">
+                        </div>
+                        <div>
+                            <p>Autenticación con doble factor</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
