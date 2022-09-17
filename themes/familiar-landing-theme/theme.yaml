@@ -3,3 +3,215 @@ description: ''
 author: Designeer
 homepage: ''
 code: familiar-landing-page
+form:
+    tabs:
+        fields:
+            # General
+
+            config_general:
+                label: Configuraciones
+                type: section
+                tab: General
+            logo_main:
+                tab: General
+                label: 'Logo Principal'
+                type: mediafinder
+                mode: image
+                imageHeight: 80
+                imageWidth: 260
+                span: auto
+            logo_secondary:
+                tab: General
+                label: 'Logo Secundario'
+                type: mediafinder
+                mode: image
+                imageHeight: 80
+                imageWidth: 260
+                span: auto
+            section_switch:
+                tab: General
+                label: Secciones
+                type: section
+            switch_hero:
+                label: 'Sección Hero'
+                type: switch
+                tab: General
+            switch_cosas_importantes:
+                label: 'Sección 3 Cosas Importantes'
+                type: switch
+                tab: General
+            switch_como_portegerte:
+                label: 'Como Protegerte'
+                type: switch
+                tab: General
+            switch_estrategias:
+                label: 'Estrategias'
+                type: switch
+                tab: General
+            switch_perfiles:
+                label: 'Perfiles'
+                type: switch
+                tab: General
+            switch_tapitip:
+                label: 'Tapiti Tip'
+                type: switch
+                tab: General
+            switch_faq:
+                label: 'Preguntas Frecuentes'
+                type: switch
+                tab: General
+
+            # Hero
+            section_hero:
+                tab: Hero
+                label: Hero
+                type: section
+            hero_title:
+                tab: Hero
+                label: Titulo
+                type: text
+                span: auto
+            hero_image:
+                tab: Hero
+                label: 'Logo Principal'
+                type: mediafinder
+                mode: image
+                imageHeight: 110
+                imageWidth: 360
+                span: right
+            hero_description:
+                tab: Hero
+                label: Descripcion
+                type: richeditor
+                span: left
+
+            image_proteccion:
+                tab: proteccion
+                label: 'Imagen Como Proteger'
+                type: mediafinder
+                mode: image
+                imageHeight: 110
+                imageWidth: 360
+                span: auto
+
+#            #CCI
+#            section_home:
+#                label: General
+#                type: section
+#                tab: General
+#            logo:
+#                tab: General
+#                label: 'Logo Principal'
+#                type: mediafinder
+#                mode: image
+#                imageHeight: 110
+#                imageWidth: 360
+#                span: auto
+#            logo_secundario:
+#                tab: General
+#                label: 'Logo Secundario - blanco'
+#                type: mediafinder
+#                mode: image
+#                imageHeight: 110
+#                imageWidth: 260
+#                span: auto
+#            fecha_evento:
+#                label: 'Fecha del Evento'
+#                type: text
+#                tab: General
+#                span: auto
+#            social_hashtag:
+#                label: 'Social media hashtag'
+#                type: text
+#                tab: General
+#                span: auto
+#            section_secciones:
+#                label: 'Secciones de la Web'
+#                type: section
+#                tab: General
+#                comment: 'Activar los switchs para mostar u ocultar las secciones de la pagina principal'
+#            switch_banner:
+#                label: 'Sección Banner Principal'
+#                type: switch
+#                tab: General
+#            switch_presentacion:
+#                label: 'Sección Presentación'
+#                type: switch
+#                tab: General
+#            switch_boletines:
+#                label: 'Sección Boletines'
+#                type: switch
+#                tab: General
+#            switch_disertantes:
+#                label: 'Sección Disertantes'
+#                type: switch
+#                tab: General
+#            switch_costos:
+#                label: 'Sección Costos'
+#                type: switch
+#                tab: General
+#            switch_conferencia_virtual:
+#                label: 'Sección Conferencia Virtual'
+#                type: switch
+#                tab: General
+#            switch_patrocinadores:
+#                label: 'Sección Comite Organizador'
+#                type: switch
+#                tab: General
+#            switch_call_to_action:
+#                label: 'Sección Call to action'
+#                type: switch
+#                tab: General
+#            switch_comite:
+#                label: 'Sección Comite Organizador'
+#                type: switch
+#                tab: General
+#            switch_cronograma:
+#                label: 'Sección de Cronograma'
+#                type: switch
+#                tab: General
+            # Section Groupos de Comite
+            section_grupos_comite:
+                label: Preguntas Frecuentes
+                type: section
+                tab: FAQ
+                comment: Crear los grupos por los cuales se van a agrupar los miembros
+            preguntas_frecuentes:
+                type: repeater
+                titleFrom: name
+                tab: FAQ
+                prompt: Agregar Pregunta
+                form:
+                    fields:
+                        pregunta:
+                            label: Pregunta
+                            type: text
+                            span: full
+                        respuesta:
+                            label: Respuesta
+                            span: full
+                            type: richeditor
+            perfiles:
+                type: repeater
+                titleFrom: name
+                tab: Perfiles
+                prompt: Agregar Perfil
+                maxItems: 3
+                form:
+                    fields:
+                        nombre:
+                            label: Nombre
+                            type: text
+                            span: auto
+                        imagen:
+                            label: Imagen
+                            span: auto
+                            type: mediafinder
+                            mode: image
+                            imageWidth: 150
+                        descripcion:
+                            label: Descripción
+                            span: full
+                            type: richeditor
+
+

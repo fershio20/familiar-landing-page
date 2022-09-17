@@ -2,15 +2,42 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="fw-bold">Preguntas Frecuentes</h2>
+                <h2 class="fw-bold text-center">Preguntas Frecuentes</h2>
+                <hr>
             </div>
             <div class="col-12">
                 <div class="accordion" id="accordionPanelsStayOpenExample">
 
                     {# Accodion Item #}
-                    {% for i in 1..6 %}
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="panelsStayOpen-heading-{{loop.index}}">
+                    {% for row in this.theme.preguntas_frecuentes %}
+                        <div class="accordion accordion-flush" id="faqSection">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" name="flush-burn-pro" id="flush-burn-pro">
+                                    <button class="accordion-button fw-bold {{ loop.index == 1 ? '' : 'collapsed' }}"
+                                            type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-{{ loop.index }}"
+                                            aria-expanded="false" aria-controls="flush-{{ loop.index }}">
+                                        {{ row.pregunta }}
+                                    </button>
+                                </h2>
+                                <div id="flush-{{ loop.index }}" name="flush-{{ loop.index }}"
+                                     class="accordion-collapse collapse {{ loop.index == 1 ? 'show' : '' }}"
+                                     aria-labelledby="flush-burn-pro" data-bs-parent="#faqSection">
+                                    <div class="accordion-body">
+                                        <img src="https://www.calibraterx.com/storage/app/media/product-1.png" alt=""
+                                             class="float-end me-4">
+                                        <p dir="ltr" style="text-align: justify;">
+                                            {{ row.respuesta | raw }}
+                                        </p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    {# <div class="accordion-item">
+                        <h2 class="accordion-header fw-bold" id="panelsStayOpen-heading-{{loop.index}}">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#panelsStayOpen-collapse-{{loop.index}}"
                                     aria-controls="panelsStayOpen-collapse-{{loop.index}}">
@@ -25,11 +52,11 @@
                                 esa información y debes cuidarla.
                             </div>
                         </div>
-                    </div>
-                    {% endfor %}
+                    </div> #}
+
                     {# End of Accordion Item #}
 
-                    {#<div class="accordion-item">
+                    {# <div class="accordion-item">
                         <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
@@ -48,7 +75,7 @@
                                 <code>.accordion-body</code>, though the transition does limit overflow.
                             </div>
                         </div>
-                    </div>#}
+                    </div> #}
                 </div>
             </div>
         </div>

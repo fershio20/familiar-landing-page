@@ -2,32 +2,37 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="h2 fw-bold">
-                    Los diferentes tipos de perfiles
+                <h2 class="fw-bold text-center">
+                    Los diferentes tipos de perfiles<br/>
                     que caen en ciberdelincuencia
-                </div>
+                </h2>
                 <hr>
+                <h3 class="fw-normal text-center mb-4">
+                    ¿Sos alguno de estos?
+                </h3>
             </div>
-            <div class="row">
-                {% for i in 1..3 %}
-                <div class="col-4">
-                    <div class="card-profile text-center">
-                        <div>
-                            <img class="w-100" src="{{ 'assets/images/PNG/persona-2+box.png' | theme }}" alt="">
+            <div class="col-12">
+                <div class="row">
+                    {% for row in this.theme.perfiles %}
+                        <div class="col-12 col-md-4">
+                            <div class="card-profile text-center">
+                                <div>
+                                    <img class="w-100" src="{{ row.imagen | media }}" alt="">
+                                </div>
+                                <div class="">
+                                    <h6 class="fw-bold mt-4">
+                                        {{ row.nombre }}
+                                    </h6>
+                                    <p class="mt-md-2">
+                                        {{row.descripcion | raw }}
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="">
-                            <h6 class="fw-bold">
-                                El Desinformado
-                            </h6>
-                            <p>
-                                No presta atención a los correos que recibe y simplemente le da clic para poder
-                                terminar sus tareas pendientes.
-                            </p>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
+
         </div>
     </div>
 </section>

@@ -2,30 +2,53 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="fw-bold">
+                <h2 class="fw-bold text-center">
                     La mejor ofensa es una buena defensa
                 </h2>
                 <hr>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <h6>
-                        Aplicá estas estrategias:
-                    </h6>
-                </div>
-                {% for i in 1..3 %}
-                <div class="col-4">
-                    <div class="card-feature text-center">
-                        <div class="">
-                            <img src="{{'assets/images/SVG/icono-contrasenha.svg' | theme }}" alt="icono boton telefono" title="icono boton telefono">
-                        </div>
-                        <div>
-                            <p>Autenticación con doble factor</p>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h3 class="fw-normal">
+                            Aplicá estas estrategias:
+                        </h3>
+                    </div>
+
+                    <div class="col-12 col-md-4 mb-5 mb-md-auto">
+                        <div class="card-feature text-center">
+                            <div class="">
+                                <img src="{{'assets/images/SVG/icono-doble-factor.svg' | theme }}" alt="icono boton telefono" title="icono boton telefono">
+                            </div>
+                            <div class="card-feature-body">
+                                <p>Autenticación con doble factor</p>
+                            </div>
                         </div>
                     </div>
+                    <div class="col-12 col-md-4 mb-5 mb-md-auto">
+                        <div class="card-feature text-center">
+                            <div class="">
+                                <img src="{{'assets/images/SVG/icono-contrasenha.svg' | theme }}" alt="icono boton telefono" title="icono boton telefono">
+                            </div>
+                            <div class="card-feature-body">
+                                <p>Contraseñas complejas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card-feature text-center">
+                            <div class="">
+                                <img src="{{'assets/images/SVG/icono-llamar.svg' | theme }}" alt="icono boton telefono" title="icono boton telefono">
+                            </div>
+                            <div class="card-feature-body">
+                                <p>Llamar al banco ante dudas</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                {% endfor %}
             </div>
+
         </div>
     </div>
 </section>

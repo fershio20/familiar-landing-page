@@ -6,12 +6,33 @@ is_hidden = 0
 ==
 
 
+{% if this.theme.switch_hero %}
+    {% partial 'index/hero' %}
+{% endif %}
 
-{% partial 'index/hero' %}
-{% partial 'index/highlight' %}
-{% partial 'index/features' %}
-{% partial 'index/how-to-protect' %}
-{% partial 'index/profiles' %}
-{% partial 'index/tapitip' %}
-{% partial 'index/faq-block' %}
+{% if this.theme.switch_cosas_importantes %}
+    {% partial 'index/highlight' %}
+{% endif %}
+
+
+{% if this.theme.switch_como_portegerte %}
+    {% partial 'index/how-to-protect' %}
+{% endif %}
+
+{% if this.theme.switch_estrategias %}
+    {% partial 'index/features' %}
+{% endif %}
+
+{% if this.theme.switch_perfiles %}
+    {% partial 'index/profiles' %}
+{% endif %}
+
+{% if this.theme.switch_tapitip %}
+    {% partial 'index/tapitip' %}
+{% endif %}
+
+{% if this.theme.switch_faq %}
+    {% partial 'index/faq-block' %}
+{% endif %}
+
 
