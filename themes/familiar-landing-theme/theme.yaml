@@ -28,6 +28,7 @@ form:
                 imageHeight: 80
                 imageWidth: 260
                 span: auto
+
             section_switch:
                 tab: General
                 label: Secciones
@@ -84,7 +85,11 @@ form:
                 label: Descripcion
                 type: richeditor
                 span: left
-
+            hero_cta:
+                tab: Hero
+                label: Botón CTA
+                type: text
+                span: left
             image_proteccion:
                 tab: proteccion
                 label: 'Imagen Como Proteger'

@@ -32,18 +32,23 @@
                 >
                     ¿Si un ciberdelincuente tratara de engañarte, serías capaz de “re-trucarle” siendo más vivo que él?
                 </div>
-                <button class="btn btn-outline-primary mt-5 fl-border-radius btn-cta-hero"
+                <a class="btn btn-outline-primary mt-5 fl-border-radius btn-cta-hero"
                         data-aos="fade-right"
                         data-aos-delay="300"
+
+                   href="{{this.theme.hero_cta}}"
                 >
                     <img src="{{'assets/images/SVG/icono-boton-flecha-abajo.svg' | theme }}" alt="">
                     Quiero saber cómo
-                </button>
+                </a>
             </div>
             <div class="col-md-1"></div>
             <div class="col-12 col-md-6" data-aos="fade-left">
                 <div class="hero-img-container d-none d-md-block ">
-                    <img class="w-100" src="{{ this.theme.hero_image | media }}" alt="Hero Image" title="Hero Image">
+                    <img
+                        class="w-100"
+                        src="{{ (this.theme.hero_image | media | resize(488, 331) ) }}"
+                        alt="Hero Image" title="Hero Image">
                 </div>
             </div>
         </div>

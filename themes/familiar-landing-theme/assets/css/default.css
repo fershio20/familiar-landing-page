@@ -133,7 +133,7 @@ section#hero {
     height: 56px;
     background: #F5C219;
     border-radius: 8px;
-    transform: rotate(-2deg);
+    transform: rotate(-2deg) !important;
     margin-top: 30px;
     font-size: 16px;
     font-weight: 500;
@@ -383,6 +383,8 @@ img.logo-footer {
     }
     .btn-cta-hero {
         min-width: auto;
+        display: inline-flex;
+        align-items: center;
     }
 
     .decoration-container-hero {
@@ -465,5 +467,18 @@ img.logo-footer {
     .chat-bubble {
         width: 235px;
         font-size: 1em;
+    }
+}
+
+
+@media only screen and (max-width: 480px){
+    h2{
+        font-size: 2em;
+    }
+    h3{
+        font-size: 1.5em;
+    }
+    section#hero {
+        height: auto;
     }
 }
