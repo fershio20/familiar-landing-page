@@ -1,7 +1,7 @@
 <section id="faq">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12"  data-aos="zoom-in" data-aos-delay="100">
                 <h2 class="fw-bold text-center">Preguntas Frecuentes</h2>
                 <hr>
             </div>
@@ -11,7 +11,8 @@
                     {# Accodion Item #}
                     {% for row in this.theme.preguntas_frecuentes %}
                         <div class="accordion accordion-flush" id="faqSection">
-                            <div class="accordion-item">
+                            <div class="accordion-item"  data-aos="fade-right"
+                                 data-aos-delay="{{(loop.index * 150) + 200}}">
                                 <h2 class="accordion-header" name="flush-burn-pro" id="flush-burn-pro">
                                     <button class="accordion-button fw-bold {{ loop.index == 1 ? '' : 'collapsed' }}"
                                             type="button"
@@ -24,8 +25,6 @@
                                      class="accordion-collapse collapse {{ loop.index == 1 ? 'show' : '' }}"
                                      aria-labelledby="flush-burn-pro" data-bs-parent="#faqSection">
                                     <div class="accordion-body">
-                                        <img src="https://www.calibraterx.com/storage/app/media/product-1.png" alt=""
-                                             class="float-end me-4">
                                         <p dir="ltr" style="text-align: justify;">
                                             {{ row.respuesta | raw }}
                                         </p>

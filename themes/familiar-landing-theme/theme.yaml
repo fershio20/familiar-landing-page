@@ -93,85 +93,7 @@ form:
                 imageHeight: 110
                 imageWidth: 360
                 span: auto
-
-#            #CCI
-#            section_home:
-#                label: General
-#                type: section
-#                tab: General
-#            logo:
-#                tab: General
-#                label: 'Logo Principal'
-#                type: mediafinder
-#                mode: image
-#                imageHeight: 110
-#                imageWidth: 360
-#                span: auto
-#            logo_secundario:
-#                tab: General
-#                label: 'Logo Secundario - blanco'
-#                type: mediafinder
-#                mode: image
-#                imageHeight: 110
-#                imageWidth: 260
-#                span: auto
-#            fecha_evento:
-#                label: 'Fecha del Evento'
-#                type: text
-#                tab: General
-#                span: auto
-#            social_hashtag:
-#                label: 'Social media hashtag'
-#                type: text
-#                tab: General
-#                span: auto
-#            section_secciones:
-#                label: 'Secciones de la Web'
-#                type: section
-#                tab: General
-#                comment: 'Activar los switchs para mostar u ocultar las secciones de la pagina principal'
-#            switch_banner:
-#                label: 'Sección Banner Principal'
-#                type: switch
-#                tab: General
-#            switch_presentacion:
-#                label: 'Sección Presentación'
-#                type: switch
-#                tab: General
-#            switch_boletines:
-#                label: 'Sección Boletines'
-#                type: switch
-#                tab: General
-#            switch_disertantes:
-#                label: 'Sección Disertantes'
-#                type: switch
-#                tab: General
-#            switch_costos:
-#                label: 'Sección Costos'
-#                type: switch
-#                tab: General
-#            switch_conferencia_virtual:
-#                label: 'Sección Conferencia Virtual'
-#                type: switch
-#                tab: General
-#            switch_patrocinadores:
-#                label: 'Sección Comite Organizador'
-#                type: switch
-#                tab: General
-#            switch_call_to_action:
-#                label: 'Sección Call to action'
-#                type: switch
-#                tab: General
-#            switch_comite:
-#                label: 'Sección Comite Organizador'
-#                type: switch
-#                tab: General
-#            switch_cronograma:
-#                label: 'Sección de Cronograma'
-#                type: switch
-#                tab: General
-            # Section Groupos de Comite
-            section_grupos_comite:
+            section_grupos_faq:
                 label: Preguntas Frecuentes
                 type: section
                 tab: FAQ
@@ -214,4 +136,45 @@ form:
                             span: full
                             type: richeditor
 
+            # Contacto
+            section_contacto:
+                tab: Contacto
+                label: Sección Contactos
+                type: section
+            contact_disenho:
+                tab: Contacto
+                label: Contacto Diseño
+                type: text
+                span: auto
+            contact_redaccion:
+                tab: Contacto
+                label: Contacto Redacción
+                type: text
+                span: auto
+            # SEO
+            section_seo:
+                tab: SEO
+                label: Sección SEO
+                type: section
+            seo_analytic_id:
+                tab: SEO
+                label: Google Analytic ID
+                type: text
+                span: auto
+            meta_title:
+                tab: SEO
+                label: Meta Title
+                type: text
+                span: left
+            meta_description:
+                tab: SEO
+                label: Meta Description
+                type: textarea
+                span: left
+            meta_keywords:
+                tab: SEO
+                label: Meta Keywords
+                type: taglist
+                comment: 'Para separar Palabras usar ","'
+                span: left
 

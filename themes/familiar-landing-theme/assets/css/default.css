@@ -13,10 +13,14 @@
     --fl-main-color: #7259FF;
 
 }
+html{
+    overflow-x: hidden;
+}
 html, body{
     font-size: 16px;
     font-family: var(--bs-body-font-family);
-    color: var(--txt-black)
+    color: var(--txt-black);
+    overflow-x: hidden;
 }
 h1,h2,h3,h4{
     font-weight: 700;
@@ -60,6 +64,9 @@ h4 {
     background-color: var(--fl-main-color) !important;
     border-color: var(--fl-main-color) !important;
 }
+button.btn.btn-outline-primary:hover img {
+    filter: brightness(5);
+}
 
 .btn {
     height: 48px;
@@ -93,6 +100,7 @@ img.nav-logo {
 }
 section#hero {
     height: 100vh;
+    max-height: 940px;
     min-height: 560px;
     display: flex;
     align-items: center;
@@ -103,13 +111,13 @@ section#hero {
     z-index: 11;
 }
 .decoration-container-hero {
-    width: calc(50% - 302px);
+    width: calc(50% - 220px);
     height: 130px;
     position: absolute;
     right: 0;
     top: calc(50vh - 40px);
     background-size: 30px;
-    z-index: 10;
+    z-index: 0;
     background-repeat: repeat;
 }
 .btn-cta-hero {
@@ -177,16 +185,16 @@ span.emoji-container {
     background: #12f5ea;
     padding: 8px 16px;
     border-radius: 16px;
-    width: 300px;
+    width: 290px;
     margin-bottom: 20px;
     text-align: center;
     font-size: 1.25em;
-    margin-left: 30px;
+    margin-left: 10px;
     position: relative;
     z-index: 12;
 }
 .fl-list {
-    list-style-image: url(http://dev.familiar-landing.com/themes/familiar-landing-theme/assets/images/PNG/emoji-red-flag.png);
+    list-style-image: url('../../assets/images/PNG/emoji-red-flag.png');
 }
 ul.fl-list li {
     line-height: 32px;
@@ -237,9 +245,15 @@ ul.fl-list li:last-child {
     width: 286px;
     margin: auto;
     border-radius: 143px 143px 40px 40px;
+    max-width: 100%;
 }
 .card-feature-body {
     margin-top: 30px;
+}
+img.w-100.phishing-img {
+    max-width: 400px;
+    display: block;
+    margin: auto;
 }
 /* Section Tapiti */
 .tapiti-container {
@@ -282,6 +296,8 @@ section#tapitip {
 
 #faq .accordion-flush .accordion-item {
     border-bottom: 1px solid #dee2e6;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #faq  .accordion-flush:last-child .accordion-item {
@@ -299,6 +315,7 @@ section#tapitip {
 
 img.logo-footer {
     width: 330px;
+    max-width: 100%;
 }
 .decoration-container-1 {
     top: 100px;
@@ -331,8 +348,17 @@ img.logo-footer {
     left: 0;
     background: top left/auto 100% url('../../assets/images/PNG/donha-tortu-1.png') no-repeat;
 }
-
-
+.d-block.d-md-none.hero-img-container.mt-5 img {
+    max-width: 400px;
+    display: block;
+    margin: auto;
+}
+.card-profile.text-center img {
+    max-width: 360px;
+}
+.tapitip-text {
+    max-width: 400px;
+}
 @media only screen and (max-width: 768px){
     header {
         position: relative;
@@ -360,21 +386,32 @@ img.logo-footer {
     }
 
     .decoration-container-hero {
-        width: calc(50% - 50px);
-        top: calc(50vh - 100px);
+        width: calc(50% - 10px);
+        top: calc(50vh - 70px);
+        background-size: 20px;
+        height: 110px;
     }
     section#before-start {
         padding: 240px 16px;
     }
+    .chat-container {
+        position: relative;
+        max-width: 400px;
+        margin-top: 20px;
+    }
     .chat-emoji {
-        top: 67px;
+        top: 0;
         z-index: 100;
+        position: absolute;
     }
     .chat-bubble {
         margin-left: 70px;
         width: auto;
     }
-
+    .chat-bubble:before {
+        left: -8px;
+        top: 14px;
+    }
     .tapiti-container img {
         width: 291px;
     }
@@ -386,6 +423,9 @@ img.logo-footer {
     #tapitip .background-dots {
         width: calc(100% - 95px);
     }
+    .share-block button.btn.btn-outline-primary.fl-border-radius.btn-cta-hero {
+        padding: 10px 32px;
+    }
 
 }
 
@@ -396,5 +436,34 @@ img.logo-footer {
     }
     .decoration-container {
         width: 40%;
+    }
+}
+/*@media only screen and (min-width: px) and (max-width: 768px){
+    .decoration-container-hero {
+        width: calc(50% - 220px);
+        height: 120px;
+        top: calc(50vh - 90px);
+        background-size: 30px;
+
+
+    }
+}*/
+
+@media only screen and (min-width: 769px) and (max-width: 990px){
+    .decoration-container-hero {
+        width: calc(50% - 220px);
+        height: 120px;
+        top: calc(50vh - 90px);
+        background-size: 30px;
+
+
+    }
+    .chat-emoji {
+        width: 40px;
+        top: -10px;
+    }
+    .chat-bubble {
+        width: 235px;
+        font-size: 1em;
     }
 }

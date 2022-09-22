@@ -1,13 +1,13 @@
 <section id="profiles">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12" data-aos="zoom-in" data-aos-delay="100">
                 <h2 class="fw-bold text-center">
                     Los diferentes tipos de perfiles<br/>
                     que caen en ciberdelincuencia
                 </h2>
                 <hr>
-                <h3 class="fw-normal text-center mb-4">
+                <h3 class="fw-normal text-center mb-4"  data-aos="zoom-in" data-aos-delay="150">
                     ¿Sos alguno de estos?
                 </h3>
             </div>
@@ -15,7 +15,10 @@
                 <div class="row">
                     {% for row in this.theme.perfiles %}
                         <div class="col-12 col-md-4">
-                            <div class="card-profile text-center">
+                            <div class="card-profile text-center"
+                                 data-aos="zoom-in"
+                                 data-aos-delay="{{ (loop.index * 100) + 300 }}"
+                            >
                                 <div>
                                     <img class="w-100" src="{{ row.imagen | media }}" alt="">
                                 </div>
