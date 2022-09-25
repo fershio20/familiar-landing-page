@@ -20,15 +20,15 @@
                                  data-aos-delay="{{ (loop.index * 100) + 300 }}"
                             >
                                 <div>
-                                    <img loading="lazy" class="w-100" src="{{ row.imagen | media }}" alt="">
+                                    <img loading="lazy" class="w-100" src="{{ row.imagen | media | resize(317,405)}}" alt="">
                                 </div>
                                 <div class="">
                                     <h6 class="fw-bold mt-4">
                                         {{ row.nombre }}
                                     </h6>
-                                    <p class="mt-md-2">
+                                    <div class="mt-md-2">
                                         {{row.descripcion | raw }}
-                                    </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

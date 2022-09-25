@@ -10,9 +10,9 @@
 
                     {# Accodion Item #}
                     {% for row in this.theme.preguntas_frecuentes %}
-                        <div class="accordion accordion-flush" id="faqSection">
-                            <div class="accordion-item"  ">
-                                <h2 class="accordion-header" name="flush-burn-pro" id="flush-burn-pro">
+                        <div class="accordion accordion-flush" id="faqSection-{{loop.index}}">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header"  id="flush-burn-pro-{{loop.index}}">
                                     <button class="accordion-button fw-bold {{ loop.index == 1 ? '' : 'collapsed' }}"
                                             type="button"
                                             data-bs-toggle="collapse" data-bs-target="#flush-{{ loop.index }}"
@@ -20,13 +20,13 @@
                                         {{ row.pregunta }}
                                     </button>
                                 </h2>
-                                <div id="flush-{{ loop.index }}" name="flush-{{ loop.index }}"
+                                <div id="flush-{{ loop.index }}"
                                      class="accordion-collapse collapse {{ loop.index == 1 ? 'show' : '' }}"
-                                     aria-labelledby="flush-burn-pro" data-bs-parent="#faqSection">
+                                     aria-labelledby="flush-burn-pro-{{loop.index}}" data-bs-parent="#faqSection">
                                     <div class="accordion-body">
-                                        <p dir="ltr" style="text-align: justify;">
+                                        <div dir="ltr" style="text-align: justify;">
                                             {{ row.respuesta | raw }}
-                                        </p>
+                                        </div>
 
 
                                     </div>
