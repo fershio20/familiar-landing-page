@@ -16,7 +16,7 @@
                     {{this.theme.hero_title}}
                 </h1>
                 <div class="d-block d-md-none hero-img-container mt-5">
-                    <img class="w-100" src="{{ this.theme.hero_image | media }}" alt="Hero Image" title="Hero Image">
+                    <img class="w-100" src="{{ this.theme.hero_image | media | resize(488,331) }}" alt="Hero Image" title="Hero Image">
                 </div>
                 <div class="order-3 mt-4 mt-md-auto"
                      data-aos="fade-right"
