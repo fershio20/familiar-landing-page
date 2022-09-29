@@ -385,7 +385,7 @@ footer a {
 .btn-social-lg {
     width: 56px;
     height: 56px;
-    font-size: 28px;
+    font-size: 40px;
     border: 0;
 }
 img.logo-footer {
@@ -569,6 +569,7 @@ a.btn.btn-primary.fl-contact-btn.fl-border-radius {
     }
     section#hero {
         height: auto;
+        padding: 40px 0 80px 0;
     }
 }
 @media only screen and (max-width: 370px){

@@ -146,9 +146,19 @@ form:
                 tab: Contacto
                 label: Sección Contactos
                 type: section
+            nombre_disenho:
+                tab: Contacto
+                label: Nombre de Contacto
+                type: text
+                span: auto
             contact_disenho:
                 tab: Contacto
                 label: Contacto Diseño
+                type: text
+                span: auto
+            nombre_redaccion:
+                tab: Contacto
+                label: Nombre Redacción
                 type: text
                 span: auto
             contact_redaccion:
@@ -156,6 +166,25 @@ form:
                 label: Contacto Redacción
                 type: text
                 span: auto
+            section_social:
+                tab: Contacto
+                label: Redes Sociales
+                type: section
+            social_fb:
+                tab: Contacto
+                label: Facebook
+                type: text
+                span: left
+            social_insta:
+                tab: Contacto
+                label: Instagram
+                type: text
+                span: left
+            social_tw:
+                tab: Contacto
+                label: Twitter
+                type: text
+                span: left
             # SEO
             section_seo:
                 tab: SEO
