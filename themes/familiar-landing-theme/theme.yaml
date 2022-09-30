@@ -185,6 +185,17 @@ form:
                 label: Twitter
                 type: text
                 span: left
+            social_wa:
+                tab: Contacto
+                label: Whatsapp
+                type: text
+                span: left
+            social_wa_link:
+                tab: Contacto
+                label: Whatsapp Link
+                type: text
+                span: left
+
             # SEO
             section_seo:
                 tab: SEO
