@@ -2,91 +2,109 @@
     <img src="https://github.com/wintercms/winter/raw/develop/.github/assets/Github%20Banner.png?raw=true" alt="Winter CMS Logo" width="100%" />
 </p>
 
-[Winter](https://wintercms.com) is a free, open-source content management system based on the [Laravel](https://laravel.com) PHP framework. Developers and agencies all around the world rely upon Winter for its quick prototyping and development, safe and secure codebase and dedication to simplicity.
+Landing Page Desarrollado para la campaña de prevención de Phising del **Banco Familiar**.
 
-No matter how large or small your project is, Winter provides a rich development environment, regardless of your level of experience.
+Proyecto desarrollado en Winter CMS.
 
-[![Version](https://img.shields.io/github/v/release/wintercms/winter?sort=semver&style=flat-square)](https://github.com/wintercms/winter/releases)
+[![Version](https://img.shields.io/github/v/release/wintercms/winter?sort=semver&style=flat-square)](https://github.com/fershio20/familiar-landing-page/releases/)
 [![Tests](https://img.shields.io/github/workflow/status/wintercms/winter/Tests/develop?label=tests&style=flat-square)](https://github.com/wintercms/winter/actions)
 [![License](https://img.shields.io/github/license/wintercms/winter?label=open%20source&style=flat-square)](https://packagist.org/packages/wintercms/winter)
 [![Discord](https://img.shields.io/discord/816852513684193281?label=discord&style=flat-square)](https://discord.gg/D5MFSPH6Ux)
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/wintercms/winter)
+## Instalación del proyecto
 
-## Installing Winter
+El proyecto en WinterCMS puede ser instalado de varias maneras. Ver la [documentación](https://wintercms.com/install) para más información.
 
-Winter can be installed in several ways for both new users and experienced developers - see our [Installation page](https://wintercms.com/install) for more information.
 
-### Quick start with Composer
+### Requerimientos del Sistema
 
-For advanced users, run the following command in your terminal to install Winter via Composer:
+1. Un servidor web (Apache, Nginx, IIS, Lighttpd)
+2. Un servidor de base de datos (MySQL/MariaDB, PostgreSQL, SQL Server or SQLite)
+3. Version del PHP 7.2 o mayor
+4. Las siguientes extensiones PHP deben estar instaladas y habilitadas:
+   - Curl
+   - GD
+   - Mbstring
+   - OpenSSL
+   - PDO (and a relevant driver for your database server)
+   - SimpleXML
+   - Zip
+5. Composer 2
 
-```shell
-composer create-project wintercms/winter example.com "dev-develop"
+### Antes de empezar
+
+Antes de empezar a instalar se debe importar la BD, se puede omitir este paso, pero eso implica que la mayoria de la
+información debe cargarse desde el CMS.
+
+1. Crear una base de datos nueva en mysql.
+2. Crear o asignar un usuario y contraseña existente a la base datos recientemente creada.
+3. Importar la base de datos existente en la base datos recientemente creada.
+
+
+Código de referencia para creación de DB
+```mysql
+CREATE DATABASE db_familiar;
+GRANT ALL PRIVILEGES ON 'db_familiar'.* TO 'existing_user'@'localhost';
+FLUSH PRIVILEGES;
 ```
 
-Run the following command with the folder created by the previous command to generate an environment file which will contain your configuration settings:
 
+Código de referencia para importar
 ```shell
-php artisan winter:env
+mysqldump  db_familiar < db_familiar_prod.sql
 ```
 
-After configuring your installation, you can run the following command to run the database migrations and automatically create an administrator account with the username `admin`. The password of this account will be automatically generated and displayed in your terminal.
+
+### Instalación
+
+1. Una vez realizado los pasos previos posicionarse en la carpeta pública del servidor web y clonar el repositorio
+2. Ejecutar el comando
+```shell
+composer i --no-dev
+```
+3. Copiar el archivo .env-example
+```shell
+cp .env-example .env
+```
+4. Editar el archivo .env con los datos de la base de datos
+```
+APP_DEBUG=true # Aqui debe estar FALSE al estar en producción
+APP_URL=http://dev.familiar-landing.com # Aqui debe ir la url a utilizarse
+APP_KEY=base64:RDOFRK+qZ6E3U2iNb5iVC1dbJqLkaAWpTPo8H8v3PMk=
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=fv_familiar_dev # Aqui debe ir el nombre de la base de datos
+DB_USERNAME=root # Aqui debe ir el nombre del usuario con permisos sobre la DB
+DB_PASSWORD= ## Aqui debe ir el password de la DB
+
+...
+
+LINK_POLICY=detect # Este puede ir 'force' o 'detect'
+ENABLE_CSRF=true
+```
+
+5. Luego de completar la configuración de las variables de entorno ejecutar el siguiente comando en la raíz del proyecto,
+esto realizara la migración de la base de datos y generara una contraseña para el user admin que mostrará en la pantalla,
+en caso de no utilizar una base de datos existente:
 
 ```shell
 php artisan winter:up
 ```
 
-## Learning Winter
+## Equipo de desarrollo
 
-The best place to learn Winter is by [reading the documentation](https://wintercms.com/docs) or [following some tutorials](https://wintercms.com/blog/category/tutorials). You can also join the maintenance team and our active community on [Discord](https://discord.gg/D5MFSPH6Ux) who are always willing to help out with questions.
-
-## Development team
-
-Winter was forked from October CMS in March 2021 due to a difference in open source management philosophies between the core maintainer team and the two founders of October.
-
-The development of Winter is lead by [Luke Towers](https://luketowers.ca/), along with many wonderful people that dedicate their time to help support and grow the community.
+Este proyecto fue desarrollado por este increíble grupo de trabajo.
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/luketowers"><img src="https://avatars.githubusercontent.com/u/7253840?v=3" width="100px;" alt="Luke Towers"/><br /><sub><b>Luke Towers</b></sub></a></td>
-    <td align="center"><a href="https://github.com/bennothommo"><img src="https://avatars.githubusercontent.com/u/15900351?v=3" width="100px;" alt="Ben Thomson"/><br /><sub><b>Ben Thomson</b></sub></a></td>
-    <td align="center"><a href="https://github.com/mjauvin"><img src="https://avatars.githubusercontent.com/u/2013630?v=3" width="100px;" alt="Marc Jauvin"/><br /><sub><b>Marc Jauvin</b></sub></a></td>
-    <td align="center"><a href="https://github.com/jaxwilko"><img src="https://avatars.githubusercontent.com/u/31214002?v=4" width="100px;" alt="Jack Wilkinson"/><br /><sub><b>Jack Wilkinson</b></sub></a></td>
+    <td align="center"><a href="https://github.com/the-fgx"><img src="https://avatars.githubusercontent.com/u/59941436?v=4" width="100px;" alt="Fabio Garcete"/><br /><sub><b>Fabio Garcete</b></sub></a></td>
+    <td align="center"><a href="https://github.com/fershio20"><img src="https://avatars.githubusercontent.com/u/69645075?v=4" width="100px;" alt="Fernando Vera"/><br /><sub><b>Fernando Vera</b></sub></a></td>
+    <td align="center"><a href="https://github.com/RoKrypto"><img src="https://avatars.githubusercontent.com/u/19767431?v=4" width="100px;" alt="Rodrigo Mendoza"/><br /><sub><b>Rodrigo Mendoza</b></sub></a></td>
   </tr>
 </table>
 
-## Foundation library
 
-Winter is built on top of the wildly-popular [Laravel](https://laravel.com) framework for PHP, with the in-house [Storm](https://github.com/wintercms/storm) library as a buffer between the Laravel framework and the Winter project, to minimize breaking changes and improve stability.
 
-## Getting in touch
 
-You can get in touch with the maintainer team using the following mediums:
-
-* [Follow us on Twitter](https://twitter.com/usewintercms) for announcements and updates.
-* [Join us on Discord](https://discord.gg/D5MFSPH6Ux) to chat with us.
-
-## Contributing
-
-Before contributing issues or pull requests, be sure to review the [Contributing Guidelines](https://github.com/wintercms/.github/blob/master/CONTRIBUTING.md) first.
-
-### Coding standards
-
-Please follow the following guides and code standards:
-
-* [PSR 4 Coding Standards](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md)
-* [PSR 2 Coding Style Guide](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
-* [PSR 1 Coding Standards](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md)
-
-### Code of conduct
-
-In order to ensure that the Winter community is welcoming to all, please review and abide by the [Code of Conduct](https://github.com/wintercms/.github/blob/master/CODE_OF_CONDUCT.md).
-
-## License
-
-The Winter platform is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
-## Security vulnerabilities
-
-Please review [our security policy](https://github.com/wintercms/winter/security/policy) on how to report security vulnerabilities.
