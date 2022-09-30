@@ -86,11 +86,24 @@ en caso de no utilizar una base de datos existente:
 ```shell
 php artisan winter:up
 ```
-6. Para actualizar el framework ejecutar el sgt. comando:
+6. Posicionarse en el directorio `./raiz-del-proyecto/storage/` y remplazar la carpeta  `app` facilitad. (Realizar este paso solo si se utiliza la bd anterior)
+7. Para actualizar el framework ejecutar el sgt. comando:
 ```shell
 php artisan winter:update
 ```
+8. Todos los archivos deben estar en el usuario y grupo de apache. Ej para ubuntu:
+```shell
+cd ../
+chown -R www-data:www-data ./familiar
+```
+9. Instalación completa.
 
+## Comando Útiles
+1. Limpiar caché de configuración `php artisan config:cache`
+2. Limpiar caché del proyecto `php artisan cache:clear`
+3. Restaurar password de usuario `php artisan winter:pa`
+4. Visualizar temas `php artisan theme:list`
+5. Seleccionar tema `php artisan theme:use [nombre-del-tema]`
 ## Enlaces de Interés
 
 - **Backend:** `/backend`
