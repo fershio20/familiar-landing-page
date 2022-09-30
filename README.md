@@ -1,17 +1,11 @@
-<p align="center">
-    <img src="https://github.com/wintercms/winter/raw/develop/.github/assets/Github%20Banner.png?raw=true" alt="Winter CMS Logo" width="100%" />
-</p>
+# Banco Familiar | El Banco Nunca te Pide
 
 Landing Page Desarrollado para la campaña de prevención de Phising del **Banco Familiar**.
 
 Proyecto desarrollado en Winter CMS.
 
-[![Version](https://img.shields.io/github/v/release/wintercms/winter?sort=semver&style=flat-square)](https://github.com/fershio20/familiar-landing-page/releases/)
-[![Tests](https://img.shields.io/github/workflow/status/wintercms/winter/Tests/develop?label=tests&style=flat-square)](https://github.com/wintercms/winter/actions)
-[![License](https://img.shields.io/github/license/wintercms/winter?label=open%20source&style=flat-square)](https://packagist.org/packages/wintercms/winter)
-[![Discord](https://img.shields.io/discord/816852513684193281?label=discord&style=flat-square)](https://discord.gg/D5MFSPH6Ux)
 
-## Instalación del proyecto
+## Guia de Instalación
 
 El proyecto en WinterCMS puede ser instalado de varias maneras. Ver la [documentación](https://wintercms.com/install) para más información.
 
@@ -92,6 +86,15 @@ en caso de no utilizar una base de datos existente:
 ```shell
 php artisan winter:up
 ```
+6. Para actualizar el framework ejecutar el sgt. comando:
+```shell
+php artisan winter:update
+```
+
+## Enlaces de Interés
+
+- **Backend:** `/backend`
+- **Configuración del CMS:** `/backend/cms/themeoptions/update/familiar-landing-theme`
 
 ## Equipo de desarrollo
 
